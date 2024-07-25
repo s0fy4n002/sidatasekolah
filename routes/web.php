@@ -58,6 +58,7 @@ Route::middleware(['auth','isadmin'])->group(function(){
     Route::get('super-admin/createAdminKota', [SuperAdminController::class, 'createAdminKota'])->name('super-admin.createAdminKota');
     Route::post('super-admin/storeAdminKota', [SuperAdminController::class, 'storeAdminKota'])->name('super-admin.storeAdminKota');
     Route::get('super-admin/listSekolah/{kota_id}', [SuperAdminController::class, 'listSekolah'])->name('super-admin.listSekolah');
+    Route::get('super-admin/viewSiswa/{kota_id}', [SuperAdminController::class, 'viewSiswa'])->name('super-admin.viewSiswa');
 
 });
 

@@ -44,6 +44,7 @@
                         <td>
                             <a href="{{ route('super-admin.showAdminKota', ['id' => $user->id] ) }}" class="btn btn-info btn-sm"><i class="ri-eye-line"></i></a>
                             <a href="{{ route('super-admin.editAdminKota',['id'=> $user->id]) }}" class="btn btn-warning btn-sm"><i class="ri-edit-2-line"></i></a>
+                            <a href="{{ route('super-admin.viewSiswa',['kota_id'=> $user->kota_id]) }}" class="btn btn-success btn-sm">Lihat Siswa</a>
                             
                             {{-- <a href="{{ route('admin.sekolah.resetPassword', $user->id) }}" class="btn btn-success btn-sm"><i class="ri-refresh-line"></i></a> --}}
 

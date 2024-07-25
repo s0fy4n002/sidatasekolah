@@ -106,4 +106,15 @@ class SuperAdminController extends Controller
                          ->get();
           return view('admin-sekolah.generate',compact('results'));
       }
+
+      public function viewSiswa($kota_id){
+          if(empty($kota_id)){
+               return redirect()->back()->with('error','404');
+          }
+          $conditions = ['role_id' => 3,'is_admin'=>0,'kota_id' => $kota_id];
+          $title="Siswa";
+
+          $users = User::where($conditions)->orderBy("created_at","desc")->get();
+          return view('siswa.index', compact('users','title'));
+      }
 }
